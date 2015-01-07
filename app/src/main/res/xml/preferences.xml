@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:defaultValue="@string/pref_web_url_def"
+        android:key="pref_web_url"
+        android:summary="@string/pref_web_url_summ"
+        android:title="@string/pref_web_url" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_web_js"
+        android:summary="@string/pref_web_js_summ"
+        android:title="@string/pref_web_js" />
+</PreferenceScreen>

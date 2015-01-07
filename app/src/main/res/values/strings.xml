@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WebApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="pref_web_url_def">http://html5test.com/</string>
+    <string name="pref_web_url_key">pref_web_url</string>
+    <string name="pref_web_url_summ">Set the URL to load into the application.</string>
+    <string name="pref_web_url">URL</string>
+    <string name="pref_web_js_key">pref_web_js</string>
+    <string name="pref_web_js_summ">Enable or Disable JavaScript.</string>
+    <string name="pref_web_js">JavaScript</string>
+
+</resources>
