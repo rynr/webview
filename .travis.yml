@@ -1,1 +1,4 @@
 language: android
+android:
+ - build-tools-21.0.2
+ - android-21
