@@ -31,7 +31,7 @@ public class WebActivity extends Activity implements SharedPreferences.OnSharedP
         disableScreensaver();
         enableFullscreen();
         getPreferences().registerOnSharedPreferenceChangeListener(this);
-        registerForContextMenu(findViewById(R.id.action_settings));
+        registerForContextMenu(findViewById(R.id.webview));
     }
 
     @Override
@@ -73,7 +73,6 @@ public class WebActivity extends Activity implements SharedPreferences.OnSharedP
 
         return super.onOptionsItemSelected(item);
     }
-
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
