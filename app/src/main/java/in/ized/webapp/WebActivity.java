@@ -50,8 +50,14 @@ public class WebActivity extends Activity implements SharedPreferences.OnSharedP
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.action_home:
+                openHomeUrl();
+                return true;
             case R.id.action_settings:
                 startActivity(new Intent(this, SettingsActivity.class));
+                return true;
+            case R.id.action_faq:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.faq_url))));
                 return true;
             default:
                 return super.onContextItemSelected(item);
@@ -62,8 +68,7 @@ public class WebActivity extends Activity implements SharedPreferences.OnSharedP
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         Log.d(getClass().getName(), "Configuration changed: " + key);
         if (getString(R.string.pref_web_url_key).equals(key)) {
-            WebView myWebView = (WebView) findViewById(R.id.webview);
-            myWebView.loadUrl(getUrl());
+            openHomeUrl();
         } else if (getString(R.string.pref_web_js_key).equals(key)) {
             WebView myWebView = (WebView) findViewById(R.id.webview);
             myWebView.getSettings().setJavaScriptEnabled(isEnableJavaScript());
@@ -94,7 +99,11 @@ public class WebActivity extends Activity implements SharedPreferences.OnSharedP
         WebView myWebView = (WebView) findViewById(R.id.webview);
         myWebView.getSettings().setJavaScriptEnabled(isEnableJavaScript());
         myWebView.setWebViewClient(getWebClient());
+        openHomeUrl();
+    }
 
+    private void openHomeUrl() {
+        WebView myWebView = (WebView) findViewById(R.id.webview);
         myWebView.loadUrl(getUrl() + "?id=" + Settings.Secure.getString(this.getContentResolver(),
                 Settings.Secure.ANDROID_ID));
     }
