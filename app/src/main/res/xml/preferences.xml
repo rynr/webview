@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:persistent="true"
+    android:title="@string/action_settings">
     <EditTextPreference
+        android:id="@+id/pref_web_url_field"
+        android:contentDescription="@string/pref_web_url_desc"
         android:defaultValue="@string/pref_web_url_def"
-        android:key="pref_web_url"
+        android:key="@string/pref_web_url_key"
+        android:persistent="true"
         android:summary="@string/pref_web_url_summ"
         android:title="@string/pref_web_url" />
     <CheckBoxPreference
-        android:defaultValue="true"
-        android:key="pref_web_js"
+        android:id="@+id/pref_web_js_field"
+        android:contentDescription="@string/pref_web_js_desc"
+        android:key="@string/pref_web_js_key"
+        android:persistent="true"
         android:summary="@string/pref_web_js_summ"
         android:title="@string/pref_web_js" />
 </PreferenceScreen>
