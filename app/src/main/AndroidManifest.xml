@@ -19,7 +19,7 @@
             android:name=".SettingsActivity"
             android:label="WebApp - Settings"
             android:noHistory="true"
-            android:theme="@style/Base.Theme.AppCompat.CompactMenu">
+            android:theme="@style/SettingsTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".WebActivity" />
